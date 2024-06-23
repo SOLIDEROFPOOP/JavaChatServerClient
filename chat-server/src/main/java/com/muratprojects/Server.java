@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
 public class Server implements Runnable{
     private ArrayList<ConnectionHandler> connectionsList;
     private ExecutorService pool;
-    private ServerSocket server;
+    private ServerSocket serverSocket;
     private boolean done;
     public Server(){
         connectionsList = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Server implements Runnable{
     @Override
     public void run() {
         try {
-            ServerSocket serverSocket = new ServerSocket(9999);
+            serverSocket = new ServerSocket(9999);
             pool = Executors.newCachedThreadPool();
             while (!done){
                 Socket client = serverSocket.accept();
@@ -51,8 +51,8 @@ public class Server implements Runnable{
         for (ConnectionHandler ch : connectionsList){
             ch.shutDown();
         }
-        if (!server.isClosed()){
-            server.close();
+        if (!serverSocket.isClosed()){
+            serverSocket.close();
         }
     }
 
