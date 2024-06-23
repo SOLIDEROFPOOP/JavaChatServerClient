@@ -10,6 +10,7 @@ This is a simple chat application implemented in Java using socket programming. 
 - Clients can leave the chat gracefully.
 
 ## Project Structure
+'''bash
 src/
 │
 ├── com/muratprojects/
@@ -17,7 +18,7 @@ src/
 │ └── Client.java
 │
 └── README.md
-
+'''
 
 ## Requirements
 
