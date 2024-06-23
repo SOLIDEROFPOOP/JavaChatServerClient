@@ -9,17 +9,6 @@ This is a simple chat application implemented in Java using socket programming. 
 - Clients can change their nicknames.
 - Clients can leave the chat gracefully.
 
-## Project Structure
-'''bash
-src/
-│
-├── com/muratprojects/
-│ ├── Server.java
-│ └── Client.java
-│
-└── README.md
-'''
-
 ## Requirements
 
 - Java Development Kit (JDK) 8 or higher
