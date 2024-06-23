@@ -50,6 +50,20 @@ public class ServerTest {
     }
     @Test
     public void testBroadcast() throws Exception{
-        // TODO: implement testing
+        // TODO: implement in server consuming messages and test
+    }
+    @Test
+
+    public void testClientSendMessage() throws Exception {
+        TimeUnit.SECONDS.sleep(1);
+        try (Socket client1 = new Socket("127.0.0.1", 9999);
+             PrintWriter out1 = new PrintWriter(client1.getOutputStream(), true);
+             BufferedReader in1 = new BufferedReader(new InputStreamReader(client1.getInputStream()));
+             Socket client2 = new Socket("127.0.0.1", 9999);
+             PrintWriter out2 = new PrintWriter(client2.getOutputStream(), true);
+             BufferedReader in2 = new BufferedReader(new InputStreamReader(client2.getInputStream()))) {
+
+            // TODO: some errors with reading messages fix that
+        }
     }
 }
